@@ -9,4 +9,13 @@ class Rolodex
 		contact.id = @contact_id
 		@contact_id += 1
 	end
+
+
+
+	def find_contact(contact)
+		
+	end
+
+	def delete(contact)
+	end
 end

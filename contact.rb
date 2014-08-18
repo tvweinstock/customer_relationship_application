@@ -6,4 +6,14 @@ class Contact
 		@email = email
 		@note = note
 	end
+
+
+	def show_contact
+		puts "First Name: #{first_name}"
+		puts "Last Name: #{last_name}"
+		puts "Email: #{email}"
+		puts "Note: #{note}"
+	end
+
+
 end

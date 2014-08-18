@@ -3,6 +3,12 @@ require_relative 'rolodex'
 
 class CRM
 	attr_accessor :name
+
+	def self.run(name)
+		crm = self.new(name)
+		crm.main_menu
+	end
+
 	def initialize(name)
 		@name = name
 		@rolodex = Rolodex.new
@@ -54,9 +60,49 @@ class CRM
 		@rolodex.add_contact(Contact.new(first_name, last_name, email, note))
 		main_menu
 	end
+
+	def modify_contact
+        # Determine who you're chanigng
+        puts "Please enter contact id."
+        user_id = gets.chomp.to_i
+
+        # Find the contact
+        # Take it out of the rolodex 
+        contact = @rolodex.find_contact(user_id)
+
+        # Figure out part to change
+     	print_modify_menu
+		puts "Select item to modify."
+		selection = gets.chomp.to_i
+        puts "Enter new information"
+        new_info = gets.chomp
+
+
+        # Make the change 
+        # Put it back in the rolodex
+        case selection
+        when 1 then contact.first_name = new_info
+        when 2 then contact.last_name = new_info
+        when 3 then contact.email = new_info
+        when 4 then contact.note = new_info
+        end
+	end
+
+	def print_modify_menu
+		puts "[1] First Name"
+		puts "[2] Last Name"
+		puts "[3] Email"
+		puts "[4] Note"
+	end
+
+
+
+	def display_contact
+	end
+
+
+
+
 end
 
-
-
-crm = CRM.new("Bitmaker Labs CRM")
-crm.main_menu
+CRM.run("Bitmaker Labs CRM")
