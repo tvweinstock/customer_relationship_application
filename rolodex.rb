@@ -13,9 +13,9 @@ class Rolodex
 
 
 	def find_contact(contact)
-		
+
 	end
 
-	def delete(contact)
+	def delete_contact(contact)
 	end
 end

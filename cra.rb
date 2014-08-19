@@ -37,7 +37,7 @@ class CRM
 		when 1 then add_new_contact
 		when 2 then modify_contact
 		when 3 then delete_contact
-		when 4 then display_contact
+		when 4 then display_contacts
 		when 5 then display_attribute
 		when 6
 			puts "Goodbye!"
@@ -95,11 +95,22 @@ class CRM
 		puts "[4] Note"
 	end
 
+	def delete_contact
+		# Determine who you're deleting
+		puts "Please enter contact id of entry you wish to remove."
+		user_id = gets.chomp.to_i
 
-
-	def display_contact
+		# find the contact, take it out of the rolodex	
+		# delete contact
+		remove_contact = @rolodex.delete_contact(user_id)
+	
 	end
 
+	def display_contacts
+		ObjectSpace.each_object(Rolodex).count
+	end
+
+	def display_attribute
 
 
 
