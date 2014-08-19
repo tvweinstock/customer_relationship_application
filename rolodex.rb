@@ -17,6 +17,9 @@ class Rolodex
 	end
 
 	def delete_contact(contact)
+		puts "Item deleted! Return to main menu."
+		print_main_menu
+
 	end
 
 
