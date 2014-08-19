@@ -18,4 +18,6 @@ class Rolodex
 
 	def delete_contact(contact)
 	end
+
+
 end
