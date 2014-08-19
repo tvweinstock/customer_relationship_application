@@ -1,3 +1,4 @@
+
 customer_relationship_application
 =================================
 Suggested Process
@@ -41,12 +42,18 @@ Implement the Runner
 Implement the Contact Class
 
 -As a developer, the contact class should have five attributes: id, first_name, last_name, email and notes.
+
 -As a developer, when a user creates a contact, all five attributes are mandatory.
+
 -As a developer, I am able to modify those attributes at any point in the program at a later time.
+
 -As a developer, the Contact class should also have a method that displays all of its values.
+
 
 
 Implement the Rolodex Class
 
 -As a developer, I should implement the Rolodex class as an array that accepts new contacts.
+
 -As a developer, the rolodex class should have the following methods: add, modify_contact, display_all_contacts, display_particular_contact, display_info_by_attribute and delete_contact.
+
